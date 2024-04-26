@@ -8,11 +8,27 @@
             h1, form {
                 text-align: center;
             }
+            h1 {
+                margin: 20px;
+                color: blue
+            }
+            input {
+                width: 500px;
+                margin: 10px;
+            }
         </style>
 
         <body>
             <h1>Google Advanced Search</h1>
-            <form action="https://images.google.com/images" id="search">
+            <form action="https://www.google.com/advanced_search" id="search">
+                todas estas palabras: <input type="text" name="as_q" placeholder="Ingresa las palabras importantes: Terrier ratonero tricolor."> 
+                <br>
+                esta palabra o frase exactas: <input type="text" name="as_epq" placeholder="Ingresa las palabras exactas entre comillas: 'Terrier ratonero'."> 
+                <br>
+                cualquiera de estas palabras: <input type="text" name="as_oq" placeholder="Ingresa OR entre las palabras que desees: En miniatura OR estándar .">
+                <br>
+                ninguna de estas palabras: <input type="text" name="as_eq" placeholder="Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -'Jack Russell' .">
+                <br>
                 <input type="text" name="q">
                 <input type="submit" value="Google Search Image">
             </form>
