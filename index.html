@@ -14,15 +14,78 @@
                 color: blue;
                 
             }
+            a  {
+                text-align: right;
+                display:inline-block;
+                padding: auto;
+                margin: 5px;
+                color: black;
+                font-family: arial, sans-serif;
+             
+            }
+            .search {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                margin: 11px 4px;
+                padding: 0 16px;
+                line-height: 27px;
+                height: 36px;
+                min-width: 54px;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+                width: 200px;
 
+            }
+            .box {
+                display: flex;
+                z-index: 3;
+                position: relative;
+                min-height: 44px;
+                background: #fff;
+                border: 1px solid #dfe1e5;
+                box-shadow: none;
+                border-radius: 24px;
+                margin: 0 auto;
+                width: 638px;
+                max-width: 584px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+            }
+            .links {
+                text-align: right;
+                
+            }
+            #header {
+                text-align: center;
+            }
+            .form{
+                align-items: center;
+                margin: 150px;
+            }
         </style>
     </head>
     <body>
-        <h1>Google Search</h1>
+        <div class="links">
+            <a href="file:///C:/Users/eduar/OneDrive/Escritorio/cs50/CS50/image.html">Images</a>
+            <a href="file:///C:/Users/eduar/OneDrive/Escritorio/cs50/CS50/advanced.html">Advanced</a>
+        </div>
+        <div class="form">
+        <div id="header">
+        <img src="file:///C:/Users/eduar/OneDrive/Escritorio/cs50/CS50/static/googlelogo_color_272x92dp.png" alt="logo" width="300">
+        </div>
         <form action="https://www.google.com/search" id="search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
+            <div>
+            <input class="box" type="text" name="q">
+            </div>
+            <input class="search" type="submit" value="Google Search">
+            <input class="search" type="submit" name="btnI" value="I feel lucky" formaction="https://google.com/search">
         </form>
+    </div>
     </body>
 </html>
 

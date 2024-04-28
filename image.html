@@ -14,15 +14,62 @@
                 padding: auto;
                 margin: 20px;
             }
+            .search {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                margin: 11px 4px;
+                padding: 0 16px;
+                line-height: 27px;
+                height: 36px;
+                min-width: 54px;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
+                width: 200px;
+
+            }
+            .box {
+                display: flex;
+                z-index: 3;
+                position: relative;
+                min-height: 44px;
+                background: #fff;
+                border: 1px solid #dfe1e5;
+                box-shadow: none;
+                border-radius: 24px;
+                margin: 0 auto;
+                width: 638px;
+                max-width: 584px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+            }
+            #header {
+                text-align: center;
+            }
+            .form{
+                align-items: center;
+                margin: 150px;
+            }
         </style>
 
         <body>
-            <a id="linked" href="C:/Users/EMora/OneDrive/Escritorio/cs50/CS50/index.html">Pagina principal</a>
-            <h1>Google Image Search</h1>
+            <a id="linked" href="file:///C:/Users/eduar/OneDrive/Escritorio/cs50/CS50/index.html">Pagina principal</a>
+            <div class="form">
+            <div id="header">
+                <img src="file:///C:/Users/eduar/OneDrive/Escritorio/cs50/CS50/static/googlelogo_color_272x92dp.png" alt="logo" width="300">
+            </div>
             <form action="https://images.google.com/images" id="search">
-                <input type="text" name="q">
-                <input type="submit" value="Google Search Image">
+                <div>
+                <input type="text" name="q" class="box">
+                </div>
+                <input type="submit" value="Google Search Image" class="search">
+            
             </form>
+        </div>
         </body>
     </head>
 </html>

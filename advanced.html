@@ -3,35 +3,124 @@
     <head>
         <title>Advanced search</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <style>
-            h1, form {
-                text-align: center;
-            }
+            
             h1 {
-                margin: 20px;
-                color: blue
-            }
-            input {
-                width: 500px;
+                color: #d93025;
+                font-size: 20px;
                 margin: 10px;
+                text-align: left;
+                margin-bottom: 20px;
+            
             }
+            
+            #linked {
+                text-align: right;
+                display: block;
+                padding: auto;
+                margin: 20px;
+            }
+            .button {
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                background-color: #4d90fe;
+                background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+                background-image: -moz-linear-gradient(top, #4d90fe, #4787ed);
+                background-image: -ms-linear-gradient(top, #4d90fe, #4787ed);
+                background-image: -o-linear-gradient(top, #4d90fe, #4787ed);
+                background-image: linear-gradient(top, #4d90fe, #4787ed);
+                border: 1px solid #3079ed;
+                color: #fff;
+                -webkit-user-select: none;
+                user-select: none;
+                line-height: 100%;
+                height: 30px;
+                min-width: 150px;
+                width: 200px;
+                margin-left: 10px;
+            }
+            .options {
+                -webkit-border-radius: 1px;
+                -moz-border-radius: 1px;
+                border-radius: 1px;
+                border: 1px solid #d9d9d9;
+                border-top: 1px solid #c0c0c0;
+                font-size: 13px;
+                height: 25px;
+                padding: 1px 8px;
+                width: 200px;
+            
+            }
+            .all {
+                
+                flex-direction: column;
+                align-items: flex-start;
+                display: flex;
+                margin-bottom: 10px;
+                width: 500px;
+                margin-left: 10px;
+            }
+            
+            .pairs {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: left;
+                margin-bottom: 10px;
+            }
+            div.label-column {
+                flex: 1;
+                text-align: left;
+                margin-right: 10px;
+                width: 500px;
+                margin-bottom: 5px;
+                
+            }
+            div.input-column{
+                flex: 2;
+                text-align: left;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+        
+           
+           
         </style>
 
         <body>
-            <h1>Google Advanced Search</h1>
-            <form action="https://www.google.com/advanced_search" id="search">
-                todas estas palabras: <input type="text" name="as_q" placeholder="Ingresa las palabras importantes: Terrier ratonero tricolor."> 
-                <br>
-                esta palabra o frase exactas: <input type="text" name="as_epq" placeholder="Ingresa las palabras exactas entre comillas: 'Terrier ratonero'."> 
-                <br>
-                cualquiera de estas palabras: <input type="text" name="as_oq" placeholder="Ingresa OR entre las palabras que desees: En miniatura OR estándar .">
-                <br>
-                ninguna de estas palabras: <input type="text" name="as_eq" placeholder="Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan: -Roedor, -'Jack Russell' .">
-                <br>
-                <input type="text" name="q">
-                <input type="submit" value="Google Search Image">
+            <a id="linked" href="file:///C:/Users/eduar/OneDrive/Escritorio/cs50/CS50/index.html">Pagina principal</a>
+            <h1>Advanced Search</h1>
+            <form action="https://www.google.com/search" id="search">
+                <div class="all">
+                    <div id="todas" class="pairs">
+                        <div class="label-column"><label for="palabras"> todas estas palabras: </label></div>
+                        <div class="input-column"><input type="text" name="as_q"  class="options" id="palabras"> </div>
+                    </div>
+                    <div id="exacta" class="pairs">
+                        <div class="label-column"><label for="quotes">esta palabra o frase exactas: </label></div>
+                        <div class="input-column"><input type="text" name="as_epq"  class="options" id="quotes"> </div>
+                    </div> 
+                    <div id="cualquiera" class="pairs">
+                        <div class="label-column"><label for="any">cualquiera de estas palabras: </label></div>
+                        <div class="input-column"><input type="text" name="as_oq" class="options" id="any"></div>
+                    </div>
+                    <div id="ninguna" class="pairs">
+                        <div class="label-column"><label for="none">ninguna de estas palabras: </label></div>
+                        <div class="input-column"><input type="text" name="as_eq"  class="options" id="none"></div>
+                    </div>
+                    
+                </div>
+                <div>
+                    <input type="submit" value="Google Advanced Search" class="button">
+                </div>
+                
+
             </form>
+            </div>
         </body>
     </head>
 </html>
